@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="top">
+    <text catchtap="toArea">温州维多利国际影城</text>
+    <view>
+      <text class="{{stat==1?'active':''}}" catchtap="checkout">热映</text>
+      <text class="{{stat==2?'active':''}}" catchtap="checkout">待映</text>
+    </view>
+  </view>
+  <view class="kong"></view>
+  <view class="content">
+    <view class="list" wx:if="{{stat==1}}">
+      <view class="item" wx:for="{{list}}" wx:key="index">
+        <image src="{{item.images.medium}}" data-id="{{item.id}}" catchtap="toDetail"></image>
+        <view class="item_info">
+          <view class="info">
+            <view class="title">{{item.title}}</view>
+            <view class="mb pf">评分:{{item.rating.average}}分</view>
+            <view class="mb">
+            主演:<text wx:for="{{item.casts}}" wx:key="index">{{item.name}}  </text>
+            </view>
+            <view class="mb year">年份:{{item.year}}</view>
+          </view>
+          <view class="choose">
+            <view>{{item.genres[0]}}</view>
+            <button>购票</button>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="notice">暂无相关资源</view>
+  </view>
+</view>

@@ -1,0 +1,123 @@
+<!--pages/area/area.wxml-->
+<!-- 头部信息 -->
+<view class="areainfo">
+  <view>
+    <view class="areatitle">温州维多利国际影城</view>
+    <view class="subareatitle">永嘉县桥头镇维多利广场C座3楼</view>
+    <view class="toplist">
+      <text>wifi支持</text>
+      <text>3d眼镜</text>
+      <text>停车场</text>
+      <text>出票机</text>
+    </view>
+  </view>
+  <view>
+    <image src="../../images/phone.png" class="phone"></image>
+  </view>
+</view>
+<!-- 会员卡片 -->
+<scroll-view class="scroll-box" scroll-x scroll-with-animation
+  scroll-into-view="{{toView}}"
+  bindtouchstart="touchStart"
+  bindtouchend="touchEnd">
+  <view class="viplist">
+    <view class="vipItem">
+      <view>
+        <text class="b">卡 |</text>
+        <text> 会员VIP晚上场</text>
+      </view>
+      <view>
+        <text>会员VIP晚上场</text>
+        <image src="../../images/right.png" class="right"></image>
+      </view>
+    </view>
+    <view class="vipItem">
+      <view>
+        <text class="b">卡 |</text>
+        <text> 会员VIP下午场</text>
+      </view>
+      <view>
+        <text>会员VIP下午场</text>
+        <image src="../../images/right.png" class="right"></image>
+      </view>
+    </view>
+    <view class="vipItem">
+      <view>
+        <text class="b">卡 |</text>
+        <text> 会员下午场</text>
+      </view>
+      <view>
+        <text>会员下午场</text>
+        <image src="../../images/right.png" class="right"></image>
+      </view>
+    </view>
+    <view class="vipItem">
+      <view>
+        <text class="b">卡 |</text>
+        <text> 会员晚场</text>
+      </view>
+      <view>
+        <text>会员晚上场</text>
+        <image src="../../images/right.png" class="right"></image>
+      </view>
+    </view>
+    <view class="vipItem">
+      <view>
+        <text class="b">卡 |</text>
+        <text> 会员活动日</text>
+      </view>
+      <view>
+        <text>会员日</text>
+        <image src="../../images/right.png" class="right"></image>
+      </view>
+    </view>
+    <view class="vipItem">
+      <view>
+        <text class="b">卡 |</text>
+        <text> 会员早场</text>
+      </view>
+      <view>
+        <text>会员早场夜场</text>
+        <image src="../../images/right.png" class="right"></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 电影卡片 -->
+<view class="moviecard">
+  <view class="movie_title">
+    {{data[i].title}}
+    <text> |{{data[i].rating.average}}分</text>
+  </view>
+  <!-- 电影图片  模糊 -->
+  <view class="detail_container" style="background:url({{data[i].images.large}}) no-repeat top"></view>
+  <!-- 电影图片  遮罩 -->
+  <view class="detail_mask"></view>
+  <scroll-view class="moviecard_list" scroll-x scroll-with-animation
+    scroll-into-view="{{toView}}"
+    bindtouchstart="touchStart"
+    bindtouchend="touchEnd">
+    <view class="movielist">
+      <view wx:for="{{data}}" wx:key="index">
+        <image bindtap="todetail" data-i="{{index}}" src="{{item.images.large}}" class="movieimage {{i==index?'active':''}}"></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- 选择场次列表 -->
+<view class="choosedate">
+  <text catchtap="listtab" class="{{listI==1?'choosedate_active':''}}" data-list="1">今天{{time[0]}}</text>
+  <text catchtap="listtab" class="{{listI==2?'choosedate_active':''}}" data-list="2">明天{{time[1]}}</text>
+</view>
+<view style="background:#e8e8e8">
+  <view wx:if="{{listI==1}}">
+    tab1
+  </view>
+  <view wx:else>
+    tab2
+  </view>
+</view>
+<view>
+</view>

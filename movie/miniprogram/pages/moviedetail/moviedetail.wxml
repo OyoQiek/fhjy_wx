@@ -1,0 +1,53 @@
+<!--pages/moviedetail/moviedetail.wxml-->
+<view>
+  <!-- 电影图片  模糊 -->
+  <view class="detail_container" style="background:url({{detail.images.large}}) no-repeat top"></view>
+  <!-- 电影图片  遮罩 -->
+  <view class="detail_mask"></view>
+  <!-- 电影介绍 -->
+  <view class="detail_info">
+    <!-- 左侧电影图片 -->
+    <image src="{{detail.images.large}}" class="detail_img"></image>
+    <view class="detail">
+      <!-- 右侧电影标题 -->
+      <view class="detail_nm">{{detail.title}}</view>
+      <!-- 右侧电影国家 -->
+      <view>{{detail.countries[0]}} | {{detail.durations[0]}}</view>
+      <view class="mtype">{{detail.genres[0]}}</view>
+      <!-- 右侧电影导演 -->
+      <view>{{detail.directors[0].name}}</view>
+      <!-- 上映时间 -->
+      <view>{{detail.pubdate}}上映</view>
+      <view class="detail_sc">
+        <van-rate readonly value="{{ score }}" />
+        <view>{{detail.rating.average}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 电影描述 -->
+  <view class="desc_cont">
+    <view class="desc_title">剧情</view>
+    <view class="desc">
+      {{detail.summary}}
+    </view>
+  </view>
+  <view class="desc_cont">
+    <view class="desc_title">演职人员</view>
+    <view class="desc1">
+      <view>导演:{{detail.directors[0].name}}</view>
+      <view>演员:<text wx:for="{{detail.casts}}" wx:key="index">{{item.name}}  </text></view>
+    </view>
+  </view>
+  <view class="desc_cont" style="border-bottom:0">
+    <view class="desc_title">影迷热议</view>
+    <view class="desc1">
+      <text class="writeremark">写影评</text>
+      <view wx:if="{{remark.length==0}}" class="remarknotice">--还没有评论，快抢沙发~-</view>
+      <view wx:else></view>
+    </view>
+  </view>
+  <view style="height:160rpx;"></view>
+  <view class="buyticket">
+    <van-button type="warning" size="large">选座购票</van-button>
+  </view>
+</view>

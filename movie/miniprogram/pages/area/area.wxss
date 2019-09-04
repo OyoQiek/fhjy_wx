@@ -1,0 +1,138 @@
+/* pages/area/area.wxss */
+
+.areainfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+}
+.areatitle{
+  font-size: 40rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+.phone{
+  width: 50rpx;
+  height: 50rpx;
+  border: 1px solid orange;
+  border-radius: 50%;
+  padding: 10rpx;
+}
+.subareatitle{
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+.toplist{
+  font-size: 22rpx;
+  color: rgb(111, 223, 243);
+  margin-left: -4rpx;
+}
+.toplist text{
+  margin-left: 4rpx;
+  padding: 4rpx 10rpx;
+  border: 1px solid rgb(111, 223, 243);
+  border-radius: 30rpx;
+}
+
+page{
+  overflow: hidden;
+}
+.scroll-box{
+  white-space: nowrap;
+}
+.viplist{
+  display: flex;
+  padding: 30rpx;
+}
+.vipItem{
+  font-size: 26rpx;
+  border-radius: 8rpx;
+  margin-left: 20rpx;
+}
+.vipItem view:nth-child(1){
+  background: rgb(253, 53, 53);
+  color: #fff;
+  padding: 10rpx 18rpx;
+
+}
+.vipItem view:nth-child(2){
+  box-shadow: 0 0 10rpx 0 #999;
+  font-size: 30rpx;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.b{
+  font-weight: 700;
+}
+.right{  
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 电影卡片 */
+.moviecard{
+  position: relative;
+  overflow: hidden;
+  height: 400rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.detail_container{
+  height: 400rpx;
+  opacity: .9;
+  filter: blur(40rpx);  /*高斯模糊*/
+}
+/* 遮罩层 */
+.detail_mask{
+  width: 100%;
+  height: 400rpx;
+  background: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.moviecard_list{
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+}
+.movielist{
+  display: flex;
+  align-items: flex-end;
+}
+.movieimage{
+  width: 170rpx;
+  height: 220rpx;
+  border: 1px solid #fff;
+  margin-left: 20rpx;
+}
+.movie_title{
+  color: #fff;
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 50rpx;
+}
+.active{
+  width: 200rpx;
+  height: 260rpx;
+  border: 1px solid #fff;
+}
+
+/*  */
+.choosedate{
+  padding: 20rpx;
+}
+.choosedate text{
+  font-size: 28rpx;
+  display: inline-block;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+}
+.choosedate_active{
+  background: orange;
+  color: #fff;
+}

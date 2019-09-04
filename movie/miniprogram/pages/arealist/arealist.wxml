@@ -1,0 +1,23 @@
+<!--pages/arealist/arealist.wxml-->
+<view class="container">
+  <view class="title">选择地区和影院</view>
+  <view>
+    <van-field
+      value="{{ value }}"
+      placeholder="搜索影院名称"
+      bind:change="onChange"
+    />
+  </view>
+  <text>城市列表</text>
+  <view class="list">
+    <view class="citylist">
+      <view>温州</view>
+    </view>
+    <view class="arealist">
+      <view class="item" catchtap="toIndex">
+        <view>温州维多利国际影城</view>
+        <view class="subtitle">永嘉县桥头镇维多利广场C座3楼</view>
+      </view>
+    </view>
+  </view>
+</view>

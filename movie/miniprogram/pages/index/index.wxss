@@ -1,0 +1,94 @@
+/**index.wxss**/
+.container{
+  background: #e8e8e8;
+  box-sizing: border-box;
+  overflow: hidden
+}
+.top{
+  background: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 20rpx;
+  font-size: 28rpx;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 2
+}
+.top view{
+  font-size: 32rpx;
+  font-weight: 700;
+  margin: 20rpx 0 0;
+}
+.top view text{
+  margin: 10rpx;
+}
+.kong{
+  height: 150rpx;
+}
+.active{
+  color: orange;
+}
+.content{
+  padding: 26rpx;
+  color: #666;
+}
+.list{
+  box-sizing: border-box;
+}
+.item{
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 300rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+.list .item image{
+  width: 300rpx;
+  height: auto
+}
+.item_info{
+  padding: 18rpx;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 28rpx;
+}
+.info{
+  width: 70%
+}
+.title{
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10rpx;
+}
+.mb{
+  margin-bottom: 16rpx;
+}
+.pf{
+  color: #e54847;
+}
+
+.year{
+  color: #000;
+}
+.choose{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.choose button{
+  margin-bottom: 20rpx;
+  width: 120rpx;
+  height: 70rpx;
+  font-size: 26rpx;
+  color: #e54847;
+  border: 1px solid #e54847;
+}
+.notice{
+  text-align: center;
+}

@@ -1,0 +1,47 @@
+/* pages/shopping/shopping.wxss */
+
+.top{
+  background: #fff;
+  padding: 20rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 2
+}
+.kong{
+  height: 80rpx;
+}
+.title{
+  width: 100%;
+  text-align: center;
+  font-size: 50rpx;
+  color: rgb(250, 16, 28);
+  font-weight: 700;
+  font-family: '微软雅黑';
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 30rpx;
+}
+.sell_cont{
+  height: 300rpx;
+  line-height: 300rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border-bottom: 30rpx solid #e8e8e8;
+}
+.subtitle{
+  text-align: center;
+}
+.vip{
+  text-align: center;
+}
+.vip text{
+  font-size: 50rpx;
+  color: orange;
+  display: block;
+  font-weight: 700;
+  font-family: '微软雅黑';
+  padding: 30rpx 0;
+}

@@ -1,0 +1,16 @@
+<!--pages/shopping/shopping.wxml-->
+<view class="top">
+  <text catchtap="toArea">温州维多利国际影城</text>
+</view>
+<view class="kong"></view>
+<view class="title">
+  - 热销卖品 -
+</view>
+<!-- 销售内容 -->
+<view class="sell_cont">
+  <text>~~小卖部被一抢而空啦，去其他逛逛吧~~</text>
+</view>
+<view class="vip">
+  <text>- 特权会员卡 -</text>
+  <view></view>
+</view>

@@ -1,0 +1,59 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="title">登录</view>
+  <view class="tabbar">
+    <text catchtap="checkouttab" class="{{tab==1?'tab_active':''}}" data-tab="1">手机快捷登录</text>
+    <text catchtap="checkouttab" class="{{tab==2?'tab_active':''}}" data-tab="2">账号密码登录</text>
+    <text catchtap="checkouttab" class="{{tab==3?'tab_active':''}}" data-tab="3">会员卡登录</text>
+  </view>
+</view>
+<view class="tab1" wx:if="{{tab==1}}">
+  <view class="container">
+    <view class="input">
+      <van-field
+      value="{{ username }}"
+      clearable
+      label="账号"
+      placeholder="请输入账号"
+    />
+    <van-field
+      value="{{ sms }}"
+      center
+      clearable
+      label="验证码"
+      placeholder="请输入验证码"
+      border="{{ false }}"
+      use-button-slot
+    >
+      <van-button slot="button" size="small" type="primary">发送验证码</van-button>
+    </van-field>
+    </view>
+  </view>
+  <view class="button">
+    <van-button type="info" size="large">登录/注册</van-button>
+    <view class="smsnotice">*未注册手机号验证成功后将自动注册账号</view>
+  </view>
+</view>
+<view class="tab2" wx:elif="{{tab==2}}">
+  <view class="container">
+    <view class="input">
+      <van-field
+      value="{{ username }}"
+      clearable
+      label="账号"
+      placeholder="请输入账号"
+    />
+    <van-field
+      value="{{ password }}"
+      type="password"
+      label="密码"
+      placeholder="请输入密码"
+      border="{{ false }}"
+    />
+    </view>
+  </view>
+  <view class="button">
+    <van-button type="info" size="large">登录</van-button>
+    <view class="forget">忘记密码</view>
+  </view>
+</view>

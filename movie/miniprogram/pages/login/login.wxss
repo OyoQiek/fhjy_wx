@@ -1,0 +1,47 @@
+/* pages/login/login.wxss */
+page{
+  background: #e8e8e8;
+}
+.container{
+  background: #fff;
+}
+.title{
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: 700;
+  padding: 16rpx 0;
+}
+.tabbar{
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+}
+.tabbar text{
+  display: inline-block;
+  padding: 20rpx 10rpx;
+}
+.tab_active{
+  color: orange;
+  border-bottom: 2px solid orange;
+  z-index: 2
+}
+.input{
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-top: 30rpx;
+}
+.button{
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+.button .forget{
+  float: right;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: orange;
+}
+.smsnotice{
+  font-size: 26rpx;
+  margin-top: 30rpx;
+}
